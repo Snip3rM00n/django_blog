@@ -1,8 +1,6 @@
 from django.contrib import admin
 from blogging.models import Post, Category
 
-#admin.site.register(Post)
-#admin.site.register(Category)
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -10,7 +8,6 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class CategoryInline(admin.TabularInline):
     model = Category.posts.through
-    #raw_id_fields = ("posts",)
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
