@@ -35,7 +35,7 @@
         <hr>
         <h3>{{ comment }}</h3>
         <p>{{ comment.text }}</p>
-        <span style="font-size: small;">Posted At: {{ comment.created_date }}</span>
+        <span style="font-size: small;">Posted at {{ comment.created_date }} by {{ comment.author }}</span>
         {% endfor %}
     </div>
 {% endblock %}

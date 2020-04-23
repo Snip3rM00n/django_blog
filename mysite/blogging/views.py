@@ -29,6 +29,7 @@ def detail_view(request, post_id):
         if form.is_valid():
             instance = form.save(commit=False)
             instance.post = post
+            instance.author = request.user
             instance.save()
             return redirect(request.get_full_path())
     else:
