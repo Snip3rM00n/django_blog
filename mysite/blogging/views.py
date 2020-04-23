@@ -34,8 +34,6 @@ def detail_view(request, post_id):
     else:
         form = CommentForm()
 
-    print(dir(form))
-    print(form.fields)
     comments = post.comments.all()
     context = {"post": post, "form": form, "comments": comments}
     return render(request, "blogging/detail.html", context)
